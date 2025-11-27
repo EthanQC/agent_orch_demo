@@ -1,0 +1,106 @@
+[
+  {
+    "id": 1,
+    "state": {"active_scene": "chat", "pending": null},
+    "user": "我想开始背静夜思了。",
+    "gold_scene": "recite",
+    "gold_action": "switch"
+  },
+  {
+    "id": 2,
+    "state": {"active_scene": "chat", "pending": null},
+    "user": "等下帮我背一下这首古诗《登鹳雀楼》。",
+    "gold_scene": "recite",
+    "gold_action": "switch"
+  },
+  {
+    "id": 3,
+    "state": {"active_scene": "chat", "pending": null},
+    "user": "我现在要开始写作业了。",
+    "gold_scene": "homework",
+    "gold_action": "switch"
+  },
+  {
+    "id": 4,
+    "state": {"active_scene": "chat", "pending": null},
+    "user": "你帮我看一下这道数学题。",
+    "gold_scene": "homework",
+    "gold_action": "switch"
+  },
+  {
+    "id": 5,
+    "state": {"active_scene": "chat", "pending": null},
+    "user": "我们随便聊聊,今天有点烦。",
+    "gold_scene": "chat",
+    "gold_action": "continue"
+  },
+  {
+    "id": 6,
+    "state": {"active_scene": "recite", "pending": null},
+    "user": "我继续背下一句。",
+    "gold_scene": "recite",
+    "gold_action": "continue"
+  },
+  {
+    "id": 7,
+    "state": {"active_scene": "recite", "pending": null},
+    "user": "不背了,我们先聊点别的。",
+    "gold_scene": "chat",
+    "gold_action": "exit"
+  },
+  {
+    "id": 8,
+    "state": {"active_scene": "recite", "pending": null},
+    "user": "这首诗先放一放,帮我看看语文作业的阅读题。",
+    "gold_scene": "homework",
+    "gold_action": "switch"
+  },
+  {
+    "id": 9,
+    "state": {"active_scene": "homework", "pending": null},
+    "user": "我们接着看下一道题。",
+    "gold_scene": "homework",
+    "gold_action": "continue"
+  },
+  {
+    "id": 10,
+    "state": {"active_scene": "homework", "pending": null},
+    "user": "先不写作业了,我们聊聊心情吧。",
+    "gold_scene": "chat",
+    "gold_action": "exit"
+  },
+  {
+    "id": 11,
+    "state": {"active_scene": "homework", "pending": null},
+    "user": "这题先算到这儿,我们来背一下英语单词。",
+    "gold_scene": "recite",
+    "gold_action": "switch"
+  },
+  {
+    "id": 12,
+    "state": {"active_scene": "chat", "pending": null},
+    "user": "待会儿想复习一下古诗。",
+    "gold_scene": "chat",
+    "gold_action": "continue"
+  },
+  {
+    "id": 13,
+    "state": {
+      "active_scene": "chat",
+      "pending": {"target_scene": "recite"}
+    },
+    "user": "就背静夜思吧。",
+    "gold_scene": "recite",
+    "gold_action": "switch"
+  },
+  {
+    "id": 14,
+    "state": {
+      "active_scene": "chat",
+      "pending": {"target_scene": "recite"}
+    },
+    "user": "算了不背了,你帮我看数学作业。",
+    "gold_scene": "homework",
+    "gold_action": "switch"
+  }
+]
