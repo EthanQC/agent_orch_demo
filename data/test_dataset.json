@@ -102,5 +102,107 @@
     "user": "算了不背了,你帮我看数学作业。",
     "gold_scene": "homework",
     "gold_action": "switch"
+  },
+  {
+    "id": 15,
+    "state": {"active_scene": "chat", "pending": null},
+    "user": "嗯",
+    "gold_scene": "chat",
+    "gold_action": "continue",
+    "note": "极其模糊的输入,LLM 可能给出不稳定的 score"
+  },
+  {
+    "id": 16,
+    "state": {"active_scene": "recite", "pending": null},
+    "user": "好的",
+    "gold_scene": "recite",
+    "gold_action": "continue",
+    "note": "简短确认,LLM 可能误判为低置信度"
+  },
+  {
+    "id": 17,
+    "state": {"active_scene": "chat", "pending": null},
+    "user": "我想背个诗,不过先聊会儿天吧",
+    "gold_scene": "chat",
+    "gold_action": "continue",
+    "note": "矛盾意图:提到背诗但又说先聊天,可能触发错误的 pending_switch"
+  },
+  {
+    "id": 18,
+    "state": {"active_scene": "homework", "pending": null},
+    "user": "这题太难了",
+    "gold_scene": "homework",
+    "gold_action": "continue",
+    "note": "抱怨但没有明确退出,LLM 可能误判为 exit_current"
+  },
+  {
+    "id": 19,
+    "state": {"active_scene": "chat", "pending": null},
+    "user": "帮我看看作业然后背个诗",
+    "gold_scene": "homework",
+    "gold_action": "switch",
+    "note": "多意图:同时提到作业和背诗,应该优先第一个"
+  },
+  {
+    "id": 20,
+    "state": {
+      "active_scene": "chat",
+      "pending": {"target_scene": "homework"}
+    },
+    "user": "好吧",
+    "gold_scene": "homework",
+    "gold_action": "switch",
+    "note": "pending 状态下的模糊确认,LLM 可能无法识别 is_confirm=true"
+  },
+  {
+    "id": 21,
+    "state": {"active_scene": "recite", "pending": null},
+    "user": "下一首",
+    "gold_scene": "recite",
+    "gold_action": "continue",
+    "note": "省略主语的指令,LLM 需要依赖 active_scene 上下文"
+  },
+  {
+    "id": 22,
+    "state": {"active_scene": "homework", "pending": null},
+    "user": "我要去玩了",
+    "gold_scene": "chat",
+    "gold_action": "exit",
+    "note": "隐含的退出意图,没有直接说'不做作业'"
+  },
+  {
+    "id": 23,
+    "state": {"active_scene": "chat", "pending": null},
+    "user": "今天老师布置的作业好多啊",
+    "gold_scene": "chat",
+    "gold_action": "continue",
+    "note": "提到作业但只是抱怨,并非要开始做作业"
+  },
+  {
+    "id": 24,
+    "state": {"active_scene": "recite", "pending": null},
+    "user": "换一个吧",
+    "gold_scene": "recite",
+    "gold_action": "continue",
+    "note": "指代不明确,'换'是换场景还是换材料?"
+  },
+  {
+    "id": 25,
+    "state": {
+      "active_scene": "chat",
+      "pending": {"target_scene": "recite"}
+    },
+    "user": "不想背了",
+    "gold_scene": "chat",
+    "gold_action": "continue",
+    "note": "pending 状态下的拒绝,应该清除 pending 并留在 chat"
+  },
+  {
+    "id": 26,
+    "state": {"active_scene": "homework", "pending": null},
+    "user": "我想休息一下",
+    "gold_scene": "chat",
+    "gold_action": "exit",
+    "note": "委婉的退出表达,LLM 需要理解隐含意图"
   }
 ]
